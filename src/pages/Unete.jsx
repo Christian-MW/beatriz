@@ -14,6 +14,15 @@ import { SELECTSEX } from '../hooks/data';
 import { ESTADOS } from '../hooks/data';
 import { MUNICIPIOS } from '../hooks/data';
 import imgPrincipal from '../images/principal.png'
+import imgLogo from '../images/logo.png'
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFacebook } from "@fortawesome/free-brands-svg-icons"
+import { faYoutube } from "@fortawesome/free-brands-svg-icons"
+import { faTwitter } from "@fortawesome/free-brands-svg-icons"
+
+
+
 
 const animatedComponents = makeAnimated();
 const Unete = () => {
@@ -127,35 +136,35 @@ const Unete = () => {
                                                 console.log(JSON.stringify(error));
                                             });
 
-                                    }else {
+                                    } else {
                                         setTxtValidation("El *TELÉFONO* es requerido");
                                         setSmShow(true);
                                     }
-                                }else {
+                                } else {
                                     setTxtValidation("El campo *EMAIL* tiene una estructura INCORRECTA");
                                     setSmShow(true);
                                 }
-                            }else {
+                            } else {
                                 setTxtValidation("El *EMAIL* es requerido");
                                 setSmShow(true);
                             }
-                        }else {
+                        } else {
                             setTxtValidation("El *MUNICIPIO* es requerido");
                             setSmShow(true);
                         }
-                    }else {
+                    } else {
                         setTxtValidation("El *ESTADO* es requerido");
                         setSmShow(true);
                     }
-                }else {
+                } else {
                     setTxtValidation("El *SEXO* es requerido");
                     setSmShow(true);
                 }
-            }else {
+            } else {
                 setTxtValidation("Los *APELLIDOS* son requeridos");
                 setSmShow(true);
             }
-        }else {
+        } else {
             setTxtValidation("El *NOMBRE* es requerido");
             setSmShow(true);
         }
@@ -170,241 +179,253 @@ const Unete = () => {
 
     return (
         <>
-        <div className='container'>
-            <div className='form_container'>
-                <div className="spinner-border" role="status" >
-                    <span className="sr-only">Loading...</span>
-                </div>
+            <div className='container'>
+                <div className='form_container'>
+                    <div className="spinner-border" role="status" >
+                        <span className="sr-only">Loading...</span>
+                    </div>
 
 
 
-                {/*<Button variant="primary" onClick={handleShow}>
+                    {/*<Button variant="primary" onClick={handleShow}>
                     Launch demo modal
                 </Button>*/}
 
-                <Modal show={show} onHide={handleClose}
-                    backdrop="static"
-                    keyboard={false}>
-                    <Modal.Header closeButton>
-                        <Modal.Title>¡Listo, estás anotad@!</Modal.Title>
-                    </Modal.Header>
-                    <Modal.Body>
-                        Pronto se comunicarán contigo por celular y/o correo electrónico.
-                        <br></br><br></br>
-                        Si tienes un amigo o familiar que quiera entrarle, comparte este sitio.
-                    </Modal.Body>
-                    <Modal.Footer>
-                        <Button variant="primary" onClick={handleClose}>
-                            Cerrar
-                        </Button>
-                    </Modal.Footer>
-                </Modal>
+                    <Modal show={show} onHide={handleClose}
+                        backdrop="static"
+                        keyboard={false}>
+                        <Modal.Header closeButton>
+                            <Modal.Title>¡Listo, estás registrado!</Modal.Title>
+                        </Modal.Header>
+                        <Modal.Body>
+                            Pronto se comunicarán contigo por celular y/o correo electrónico.
+                            <br></br><br></br>
+                            Si tienes un amigo o familiar que quiera entrarle, comparte este sitio.
+                        </Modal.Body>
+                        <Modal.Footer>
+                            <Button variant="primary" onClick={handleClose}>
+                                Cerrar
+                            </Button>
+                        </Modal.Footer>
+                    </Modal>
 
-{/********MODAL ALERTAS ******** */}
-                <Modal
-                    size="sm"
-                    show={smShow}
-                    centered
-                    onHide={() => setSmShow(false)}
-                    aria-labelledby="example-modal-sizes-title-sm"
-                >
-                    <Modal.Header closeButton>
-                        <Modal.Title id="example-modal-sizes-title-sm">
-                            Datos faltantes
-                        </Modal.Title>
-                    </Modal.Header>
-                    <Modal.Body>{txtValidation}</Modal.Body>
-                </Modal>
-
-
+                    {/********MODAL ALERTAS ******** */}
+                    <Modal
+                        size="sm"
+                        show={smShow}
+                        centered
+                        onHide={() => setSmShow(false)}
+                        aria-labelledby="example-modal-sizes-title-sm"
+                    >
+                        <Modal.Header closeButton>
+                            <Modal.Title id="example-modal-sizes-title-sm">
+                                Datos faltantes
+                            </Modal.Title>
+                        </Modal.Header>
+                        <Modal.Body>{txtValidation}</Modal.Body>
+                    </Modal> 
 
 
-                <div className='row'>
-                    <div className='col-md-6'>
+                    <div className='row bannner'>
+                        <div className='col-md-1 '>
+                            <img id="logoFormulario" src={imgLogo} className="img-fluid" height="576px" alt=" Beatriz Paredes" />
+                        </div>
+                        <div className='col-md-8'>
+                            BEATRIZ PAREDES
+                        </div>
+                        <div className='col-md-3 text-right'>
+                            <FontAwesomeIcon icon={faFacebook} />
+                            <FontAwesomeIcon icon={faYoutube} />
+                            <FontAwesomeIcon icon={faTwitter} />
 
-                    <div id="left_form" height="600px">
-                            <figure id="figure-st">
-                                <img id="logoFormulario" src={imgPrincipal} className="img-fluid" height="576px" alt="Enrique de la madrid perfil"/>
-                            </figure>
-							<br></br>
-                            <p id="municipio" className="m-0"></p>
-                            <p id="organizacion" className="m-0"></p>
-                            <p id="coordinador" className="m-0"></p>
+                       
+                      
                         </div>
 
                     </div>
-                    <div className='col-md-6'>
-                        <div className='form-container'>
-                            <div className='card'>
-                                <p id="registro" className="text-center p-0 m-0 h2 pt-3">
-                                    BEATRIZ PAREDES RANGEL
-                                </p>
-                                <p className="txt-form text-center mb-0">
-                                    <br></br>
-                                    Gracias por participar como voluntari@ en la recolección de las firmas necesarias para mi registro como aspirante a encabezar el Frente Amplio por México.
-                                    <br></br>
-                                    <br></br>
-                                    Al unirte estaremos en contacto para escucharte e informarte del proceso de registro de tu firma en la plataforma del Frente Amplio y lograr nuestra meta juntos.
-                                    <br></br>
-                                    <br></br>
-                                    ¡Construyamos entre todos el México de oportunidades que mereces!
-                                    <br></br>
-                                    <br></br>
-                                    ¡Muchas gracias!
-                                    <br></br>
-                                    Con tu apoyo un mejor México sí es posible.
-                                </p>
-                                <div className='inputs-form'>
-                                    <div className='row'>
-                                        <div className='col-md-6'>
-                                            <label className="form-group">
+                    <div className='row background-form-container'>
+                        <div className='col-md-6'>
 
-                                                <input type="text" name="txtNombre" id="txtNombre" className="required" placeholder="Nombre(s)*" />
-                                                <span className='span-txt'>Nombre(s)*</span>
-                                            </label>
+                            <div id="left_form" height="600px">
+                                <figure id="figure-st">
+                                    <img id="logoFormulario" src={imgPrincipal} className="img-fluid" height="576px" alt=" Beatriz Paredes" />
+                                </figure>
+                                <br></br>
+                                <p id="municipio" className="m-0"></p>
+                                <p id="organizacion" className="m-0"></p>
+                                <p id="coordinador" className="m-0"></p>
+                            </div>
+
+                        </div>
+                        <div className='col-md-6'>
+                            <div className='form-container '>
+                                <div className='card background-form-card'>
+                                    <p id="registro" className="text-center p-0 m-0 h2 pt-3">
+
+                                    </p>
+                                    <p className="txt-form text-left mb-0">
+                                        <br></br>
+                                        México está viviendo un proceso inédito en su vida democrática, en donde la participación
+                                        ciudadana es fundamental, por ello te invito a que te sumes a este proceso.  <br></br>
+                                        <br></br>
+                                        Tu firma puede ser la diferencia, pero también tu apoyo y tus propuestas.
+                                        <br></br>
+                                        <br></br>
+                                        Yo tomo en serio a mi país, quiero a los mexicanos, confío en ustedes, confíen en mí.
+                                        <br></br>
+
+                                    </p>
+                                    <div className='inputs-form'>
+                                        <div className='row'>
+                                            <div className='col-md-6'>
+                                                <label className="form-group">
+
+                                                    <input type="text" name="txtNombre" id="txtNombre" className="required" placeholder="Nombre(s)*" />
+                                                    <span className='span-txt'>Nombre(s)*</span>
+                                                </label>
+                                            </div>
+                                            <div className='col-md-6'>
+                                                <label className="form-group">
+                                                    <input type="text" name="txtAp_pat" id="txtAp_pat" className="required" placeholder="Apellidos*" />
+                                                    <span className='span-txt'>Apellidos*</span>
+                                                </label>
+                                            </div>
+                                            <div className='col-md-6'>
+                                                <label className="form-group pt-4 fg">
+                                                    <span className='span-txt txtcal'>Sexo:</span>
+                                                    {
+                                                        (SELECTSEX) != null ?
+                                                            <Select id="selectSex"
+                                                                components={animatedComponents}
+                                                                placeholder={'Sexo'}
+                                                                options={SELECTSEX}
+                                                                onChange={e => changeSex(e)}
+                                                            />
+                                                            :
+                                                            <Select></Select>
+                                                    }
+                                                </label>
+                                            </div>
+                                            <div className='col-md-6'>
+                                                <label className="form-group">
+                                                    <input value={PostalCode} onChange={ChangePostalCode} type="text" name="txtCp" id="txtCp" maxLength="5" placeholder=" " />
+                                                    <span className='span-txt'>Código Postal</span>
+                                                </label>
+                                            </div>
+                                            <div className='col-md-6'>
+                                                <label className="form-group pt-4 fg">
+                                                    <span className='span-txt txtcal'>Estado*:</span>
+                                                    {
+                                                        (ESTADOS) != null ?
+                                                            <Select id="selectMun"
+                                                                components={animatedComponents}
+                                                                placeholder={'Estado*'}
+                                                                options={ESTADOS}
+                                                                onChange={e => changeState(e)}
+                                                            />
+                                                            :
+                                                            <Select></Select>
+                                                    }
+                                                </label>
+                                            </div>
+                                            <div className='col-md-6'>
+                                                <label className="form-group pt-4 fg">
+                                                    <span className='span-txt txtcal'>Municipio*:</span>
+                                                    {
+                                                        (catalogMunicipios) != null ?
+                                                            <Select id="selectMun"
+                                                                components={animatedComponents}
+                                                                placeholder={'Municipio*'}
+                                                                options={catalogMunicipios}
+                                                                onChange={e => changeMun(e)}
+                                                            />
+                                                            :
+                                                            <Select></Select>
+                                                    }
+                                                </label>
+                                            </div>
+                                            <div className='col-md-6'>
+                                                <label className="form-group">
+                                                    <input type="email" name="txtEmail" id="txtEmail" className="required" placeholder=" " />
+                                                    <span className='span-txt'>Correo*</span>
+                                                </label>
+                                            </div>
+                                            <div className='col-md-6'>
+                                                <label className="form-group">
+                                                    <input value={Celphone} onChange={ChangeCelphone} type="text" name="txtCel" id="txtCel" className="" maxLength={10} placeholder=" " />
+                                                    <span className='span-txt'>Celular*</span>
+                                                </label>
+                                            </div>
+                                            <div className='col-md-6'>
+                                                <label className="form-group fg">
+                                                    <span className='span-txt txtcal'>Fecha de nacimiento:</span>
+
+                                                    <Form.Group controlId="dobStart" >
+                                                        <Form.Control type="date" name="dobStart"
+                                                            /*min={currentDate}*/
+                                                            max={currentDate}
+                                                            /*defaultValue={lastDateViewRequests}*/
+                                                            className='calendarF'
+                                                            onChange={(e) => FdateStart(e.target.value)}
+                                                            placeholder="" />
+                                                    </Form.Group>
+                                                </label>
+                                            </div>
                                         </div>
-                                        <div className='col-md-6'>
-                                            <label className="form-group">
-                                                <input type="text" name="txtAp_pat" id="txtAp_pat" className="required" placeholder="Apellidos*" />
-                                                <span className='span-txt'>Apellidos*</span>
-                                            </label>
-                                        </div>
-                                        <div className='col-md-6'>
-                                            <label className="form-group pt-4 fg">
-                                                <span className='span-txt txtcal'>Sexo:</span>
-                                                {
-                                                    (SELECTSEX) != null ?
-                                                        <Select id="selectSex"
-                                                            components={animatedComponents}
-                                                            placeholder={'Sexo'}
-                                                            options={SELECTSEX}
-                                                            onChange={e => changeSex(e)}
+
+
+                                        <div className='row'>
+                                            <div className='col-md-12 form-group'>
+                                                <div className="form-group d-flex">
+                                                    <div className='col-md-1'>
+                                                        <Form.Check
+                                                            className="checkData"
+                                                            onChange={(e) => aproveData(e)}
+                                                            type={"checkbox"}
+                                                            id={'default-checkbox'}
+                                                            value={'yes'}
                                                         />
-                                                        :
-                                                        <Select></Select>
-                                                }
-                                            </label>
-                                        </div>
-                                        <div className='col-md-6'>
-                                            <label className="form-group">
-                                                <input value={PostalCode} onChange={ChangePostalCode} type="text" name="txtCp" id="txtCp" maxLength="5" placeholder=" " />
-                                                <span className='span-txt'>Código Postal</span>
-                                            </label>
-                                        </div>
-                                        <div className='col-md-6'>
-                                            <label className="form-group pt-4 fg">
-                                                <span className='span-txt txtcal'>Estado*:</span>
-                                                {
-                                                    (ESTADOS) != null ?
-                                                        <Select id="selectMun"
-                                                            components={animatedComponents}
-                                                            placeholder={'Estado*'}
-                                                            options={ESTADOS}
-                                                            onChange={e => changeState(e)}
-                                                        />
-                                                        :
-                                                        <Select></Select>
-                                                }
-                                            </label>
-                                        </div>
-                                        <div className='col-md-6'>
-                                            <label className="form-group pt-4 fg">
-                                                <span className='span-txt txtcal'>Municipio*:</span>
-                                                {
-                                                    (catalogMunicipios) != null ?
-                                                        <Select id="selectMun"
-                                                            components={animatedComponents}
-                                                            placeholder={'Municipio*'}
-                                                            options={catalogMunicipios}
-                                                            onChange={e => changeMun(e)}
-                                                        />
-                                                        :
-                                                        <Select></Select>
-                                                }
-                                            </label>
-                                        </div>
-                                        <div className='col-md-6'>
-                                            <label className="form-group">
-                                                <input type="email" name="txtEmail" id="txtEmail" className="required" placeholder=" " />
-                                                <span className='span-txt'>Correo*</span>
-                                            </label>
-                                        </div>
-                                        <div className='col-md-6'>
-                                            <label className="form-group">
-                                                <input value={Celphone} onChange={ChangeCelphone} type="text" name="txtCel" id="txtCel" className="" maxLength={10} placeholder=" " />
-                                                <span className='span-txt'>Celular*</span>
-                                            </label>
-                                        </div>
-                                        <div className='col-md-6'>
-                                            <label className="form-group fg">
-                                                <span className='span-txt txtcal'>Fecha de nacimiento:</span>
-
-                                                <Form.Group controlId="dobStart" >
-                                                    <Form.Control type="date" name="dobStart"
-                                                        /*min={currentDate}*/
-                                                        max={currentDate}
-                                                        /*defaultValue={lastDateViewRequests}*/
-                                                        className='calendarF'
-                                                        onChange={(e) => FdateStart(e.target.value)}
-                                                        placeholder="" />
-                                                </Form.Group>
-                                            </label>
-                                        </div>
-                                    </div>
-
-
-                                    <div className='row'>
-                                        <div className='col-md-12 form-group'>
-                                            <div className="form-group d-flex">
-                                                <div className='col-md-1'>
-                                                    <Form.Check
-                                                        className="checkData"
-                                                        onChange={(e) => aproveData(e)}
-                                                        type={"checkbox"}
-                                                        id={'default-checkbox'}
-                                                        value={'yes'}
-                                                    />
-                                                    {/*<div className="icheckbox_square-grey">
+                                                        {/*<div className="icheckbox_square-grey">
                                                         <input name="apoyo" id="cDatos" type="checkbox" className="icheck required" value="yes" />
                                                         <ins className="iCheck-helper" onClick={(e) => aproveData(e)}>
                                                         </ins>
                                                     </div>*/}
-                                                </div>
-                                                <div className='col-md11'>
-                                                    <label onChange={(e) => aproveData(e)} className="text-justify">
-                                                        Comparto mis datos por voluntad propia,
-                                                        estoy de
-                                                        acuerdo en recibir notificaciones y noticias.
-                                                        Conozco y estoy de acuerdo con los términos y
-                                                        Políticas de privacidad.
-                                                    </label>
+                                                    </div>
+                                                    <div className='col-md11'>
+                                                        <label onChange={(e) => aproveData(e)} className="text-justify">
+                                                            Comparto mis datos por voluntad propia,
+                                                            estoy de
+                                                            acuerdo en recibir notificaciones y noticias.
+                                                            Conozco y estoy de acuerdo con los términos y
+                                                            Políticas de privacidad.
+                                                        </label>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
+
+
+                                        <br></br><br></br>
+                                        <div id="bottom-wizard">
+                                            <button id="bEnviar" type="button" onClick={sendDataUser} name="process" className="btnsubmit" disabled={!statusForm}>
+                                                <b>Enviar</b>
+                                            </button>
+                                        </div>
+
                                     </div>
-
-
-                                    <br></br><br></br>
-                                    <div id="bottom-wizard">
-                                        <button id="bEnviar" type="button" onClick={sendDataUser} name="process" className="btnsubmit" disabled={!statusForm}>
-                                            <b>Enviar</b>
-                                        </button>
-                                    </div>
-
                                 </div>
                             </div>
+
+
+
+
                         </div>
-
-
-
-
+                        {/*<div className='col-2'></div>*/}
                     </div>
-                    {/*<div className='col-2'></div>*/}
                 </div>
             </div>
-        </div>
-<Footer/>
-</>
+            <Footer />
+        </>
 
 
     );

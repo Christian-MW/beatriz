@@ -129,9 +129,7 @@ const Footer = () => {
                 </Modal.Footer>
             </Modal>
             <ul>
-                <li>
-                    <a href="https://youtu.be/PLmdBya1--s" target="_blank" className="animated_link">Conoce mi Proyecto</a>
-                </li>
+      
                 <li>
                     <a onClick={() => setLgShow(true)} target="_blank" className="animated_link" data-toggle="modal" data-target="#privacy-txt">Políticas de privacidad
                     </a>

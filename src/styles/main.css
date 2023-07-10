@@ -1,121 +1,160 @@
-
 /*#############################################*/
+
+
 /*################___GENERAL___################*/
+
+
 /*#############################################*/
-.container{
-	background-color: var(--bg--white);
-	height: 100%;
 
-	backdrop-filter: blur(20px);
-	border: var(--border);
-	border-radius: var(--br);
-	width: 70%;
-	margin: 0 auto;
-
-	box-shadow: 0 10px 20px 5px rgba(0,0,0,0.5);
-	overflow: hidden;
-	/*display: flex;*/
+.container {
+    background-color: var(--bg--white);
+    height: 100%;
+    backdrop-filter: blur(20px);
+    border: var(--border);
+    border-radius: var(--br);
+    width: 70%;
+    margin: 0 auto;
+    box-shadow: 0 10px 20px 5px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    /*display: flex;*/
 }
-.form-container{
+
+.social-network-icons {
+    color: #ffffff;
+}
+
+.form-container {
     min-height: 450px;
 }
 
+.bannner {
+    background-color: #FF4663;
+}
+
+.background-form-container {
+    background-color: #FFB4C0;
+}
+
+.background-form-card {
+    border-radius: 15px;
+}
+
+
 /*#############################################*/
+
+
 /*################___SPINNER___################*/
+
+
 /*#############################################*/
-.spinner-border{
+
+.spinner-border {
     display: none;
 }
 
 
 /*#############################################*/
+
+
 /*###############___FORMULARIO___##############*/
+
+
 /*#############################################*/
-.form-container
-{
+
+.form-container {
     position: relative;
     min-height: 450px;
 }
-.card{
-	border-radius: var(--br);
-	box-sizing: border-box;
-	width: 100%;
-	margin: 10px 0 20px 0;
-	overflow: hidden;
-	border: var(--border);
-	box-shadow: 0 5px 15px 2px rgba(0,0,0,0.15) ;
+
+.card {
+    border-radius: var(--br);
+    box-sizing: border-box;
+    width: 100%;
+    margin: 10px 0 20px 0;
+    overflow: hidden;
+    border: var(--border);
+    box-shadow: 0 5px 15px 2px rgba(0, 0, 0, 0.15);
 }
 
-.card .content{
-	display: flex;
-	align-items: center;
-	background: white;
-	padding: 20px;
+.card .content {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 20px;
 }
-.txt-form{
+
+.txt-form {
     padding: 0px 30px
 }
-.inputs-form{
+
+.inputs-form {
     padding: 30px;
 }
-.span-txt{
+
+.span-txt {
     cursor: text;
 }
-.icheckbox_square-grey{
+
+.icheckbox_square-grey {
     position: relative;
 }
-.checkData{
+
+.checkData {
     cursor: pointer;
 }
+
 #bottom-wizard {
-	text-align: right;
-	position: absolute;
-	width: 100%;
-	bottom: 25px;
-	right: 45px;
+    text-align: right;
+    position: absolute;
+    width: 100%;
+    bottom: 25px;
+    right: 45px;
 }
-.btnsubmit{
+
+.btnsubmit {
     background: #64C2CB;
-	border: none;
-	font-weight: bolder;	
-	color: #fff;
-	padding: 15px 30px;
-	border-radius: var(--br);
-	
-	text-decoration: none;
-	transition: background 0.5s ease;
-	-moz-transition: background 0.5s ease;
-	-webkit-transition: background 0.5s ease;
-	-o-transition: background 0.5s ease;
-	display: inline-block;
-	cursor: pointer;
-	font-weight: 400;
-	outline: none;
-	text-align: center;
-	position: relative;
-	font-size: 15px;
-	-webkit-border-radius: var(--br);
-	-moz-border-radius: var(--br);
-	line-height: 1;
+    border: none;
+    font-weight: bolder;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: var(--br);
+    text-decoration: none;
+    transition: background 0.5s ease;
+    -moz-transition: background 0.5s ease;
+    -webkit-transition: background 0.5s ease;
+    -o-transition: background 0.5s ease;
+    display: inline-block;
+    cursor: pointer;
+    font-weight: 400;
+    outline: none;
+    text-align: center;
+    position: relative;
+    font-size: 15px;
+    -webkit-border-radius: var(--br);
+    -moz-border-radius: var(--br);
+    line-height: 1;
 }
-.btnsubmit[disabled]{
-	background-color: #FFB4C0;
+
+.btnsubmit[disabled] {
+    background-color: #FFB4C0;
     cursor: not-allowed;
 }
-.calendarF{
+
+.calendarF {
     z-index: 999999;
 }
-.txtcal{
+
+.txtcal {
     margin-top: -30px;
 }
 
-
-.icheck{
+.icheck {
     margin-right: 5px;
     position: absolute;
     opacity: 0;
 }
-.iCheck-helper{
+
+.iCheck-helper {
     position: absolute;
     top: 0%;
     left: 0%;
@@ -128,249 +167,269 @@
     border: 0px;
     opacity: 0;
 }
-.fg{
-	margin-top: 15px;
-}
-.figure-st{
-	margin: 0;
-}
-.left_form{
-	padding-top: 100px;
+
+.fg {
+    margin-top: 15px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-label.form-group{
-	width: 100%;
-    margin-bottom:15px;
-    position:relative;
-    border-bottom:1px solid #ddd;
+.figure-st {
+    margin: 0;
 }
-label:focus-within > span,
-input:not(:placeholder-shown) + span{
+
+.left_form {
+    padding-top: 100px;
+}
+
+label.form-group {
+    width: 100%;
+    margin-bottom: 15px;
+    position: relative;
+    border-bottom: 1px solid #ddd;
+}
+
+label:focus-within>span,
+input:not(:placeholder-shown)+span {
     color: #999999;
-    transform:translateY(0px);
+    transform: translateY(0px);
 }
-input{
-    width:100%;
-    padding:10px 0px;
-    margin-top:20px;
-    border:none;
-    outline:none;
+
+input {
+    width: 100%;
+    padding: 10px 0px;
+    margin-top: 20px;
+    border: none;
+    outline: none;
 }
-input::placeholder{
-    opacity:0;
+
+input::placeholder {
+    opacity: 0;
 }
-label>span{
-    position:absolute;
-    top:0;
-    left:0;
-    transform:translateY(30px);
-    transition-duration:300ms;
+
+label>span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(30px);
+    transition-duration: 300ms;
 }
+
 .did-floating-label-content {
-	position: relative;
-  }
-  
-  .did-floating-label {
-	color: #1e4c82;
-	font-size: 14px;
-	font-weight: normal;
-	position: absolute;
-	pointer-events: none;
-	left: 0px;
-	top: 11px;
-	padding: 0 5px;
-	background: #fff;
-	transition: 0.2s ease all;
-	-moz-transition: 0.2s ease all;
-	-webkit-transition: 0.2s ease all;
-  }
-  
-  .did-floating-input, .did-floating-select {
-	font-size: 16px;
-	display: block;
-	width: 100%;
-	height: 40px;
-	padding: 0 5px;
-	background: #fff;
-	color: #323840;
-	border: none;
-	border-bottom: 1px solid lightgrey;
-	border-radius: 4px;
-	box-sizing: border-box;
-  }
-  .did-floating-input:focus, .did-floating-select:focus {
-	outline: none;
-  }
-  .did-floating-input:focus ~ .did-floating-label, .did-floating-select:focus ~ .did-floating-label {
-	top: -18px;
-	font-size: 14px;
-  }
+    position: relative;
+}
 
-  select.did-floating-select::-ms-expand {
-	display: none;
-  }
-  
-  .did-floating-input:not(:placeholder-shown) ~ .did-floating-label {
-	top: -18px;
-	font-size: 15px;
-  }
-  
-  .did-floating-select:not([value=""]):valid ~ .did-floating-label {
-	top: -18px;
-	font-size: 15px;
-  }
-  
-  .did-floating-select[value=""]:focus ~ .did-floating-label {
-	top: 11px;
-	font-size: 15px;
-  }
-  .input-group {
-	display: flex;
-  }
-  .input-group .did-floating-input {
-	border-radius: 0 4px 4px 0;
-	border-left: 0;
-	padding-left: 0;
-  }
+.did-floating-label {
+    color: #1e4c82;
+    font-size: 14px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 0px;
+    top: 11px;
+    padding: 0 5px;
+    background: #fff;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
 
-  .input-group-append {
-	display: flex;
-	align-items: center;
-	/*   margin-left:-1px; */
-  }
-  
-  .input-group-text {
-	display: flex;
-	align-items: center;
-	font-weight: 400;
-	height: 34px;
-	color: #323840;
-	padding: 0 5px 0 20px;
-	font-size: 12px;
-	text-align: center;
-	white-space: nowrap;
-	border: 1px solid #3D85D8;
-	border-radius: 4px 0 0 4px;
-	border-right: none;
-  }
-  .form-group {
-	position: relative;
+.did-floating-input,
+.did-floating-select {
+    font-size: 16px;
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding: 0 5px;
+    background: #fff;
+    color: #323840;
+    border: none;
+    border-bottom: 1px solid lightgrey;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.did-floating-input:focus,
+.did-floating-select:focus {
+    outline: none;
+}
+
+.did-floating-input:focus~.did-floating-label,
+.did-floating-select:focus~.did-floating-label {
+    top: -18px;
+    font-size: 14px;
+}
+
+select.did-floating-select::-ms-expand {
+    display: none;
+}
+
+.did-floating-input:not(:placeholder-shown)~.did-floating-label {
+    top: -18px;
+    font-size: 15px;
+}
+
+.did-floating-select:not([value=""]):valid~.did-floating-label {
+    top: -18px;
+    font-size: 15px;
+}
+
+.did-floating-select[value=""]:focus~.did-floating-label {
+    top: 11px;
+    font-size: 15px;
+}
+
+.input-group {
+    display: flex;
+}
+
+.input-group .did-floating-input {
+    border-radius: 0 4px 4px 0;
+    border-left: 0;
+    padding-left: 0;
+}
+
+.input-group-append {
+    display: flex;
+    align-items: center;
+    /*   margin-left:-1px; */
+}
+
+.input-group-text {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    height: 34px;
+    color: #323840;
+    padding: 0 5px 0 20px;
+    font-size: 12px;
+    text-align: center;
+    white-space: nowrap;
+    border: 1px solid #3D85D8;
+    border-radius: 4px 0 0 4px;
+    border-right: none;
+}
+
+.form-group {
+    position: relative;
 }
 
 .form-group i {
-	font-size: 20px;
-	position: absolute;
-	right: 0;
-	top: 10px;
-	color: #ccc;
+    font-size: 20px;
+    position: absolute;
+    right: 0;
+    top: 10px;
+    color: #ccc;
 }
 
 .form-group label {
-	font-weight: 400;
-	color: #555;
+    font-weight: 400;
+    color: #555;
 }
 
 .form-group.radio_questions label {
-	border: 2px solid #e8ebed;
-	display: block;
-	font-weight: 400;
-	padding: 15px 45px 15px 15px;
-	box-sizing: content-box;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-	cursor: pointer;
-	color: #555;
-	background-color: #fff;
+    border: 2px solid #e8ebed;
+    display: block;
+    font-weight: 400;
+    padding: 15px 45px 15px 15px;
+    box-sizing: content-box;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #555;
+    background-color: #fff;
 }
 
 .form-group.checkbox_questions label {
-	font-weight: 400;
-	cursor: pointer;
-	color: #555;
+    font-weight: 400;
+    cursor: pointer;
+    color: #555;
 }
 
 .form-group.radio_questions .iradio_square-yellow {
-	position: absolute;
-	top: 17px;
-	right: 15px;
+    position: absolute;
+    top: 17px;
+    right: 15px;
 }
 
 .form-group.checkbox_questions .icheckbox_square-yellow {
-	margin-right: 10px;
+    margin-right: 10px;
 }
 
 .form-group.radio_questions label:hover {
-	border: 2px solid #ffcc33;
+    border: 2px solid #ffcc33;
 }
 
 .form-group.select {
-	margin-bottom: 30px;
+    margin-bottom: 30px;
 }
 
 
 /*#############################################*/
+
+
 /*################___FOOTER___################*/
+
+
 /*#############################################*/
-.clearfix{
-	padding-top: 40px
+
+.clearfix {
+    padding-top: 40px
 }
-.animated_link{
-	cursor: pointer;
+
+.animated_link {
+    cursor: pointer;
 }
+
 footer {
-	background-color: #fff;
-	border-top: 1px solid #ededed;
-	padding: 25px 0;
+    background-color: #fff;
+    border-top: 1px solid #ededed;
+    padding: 25px 0;
 }
+
 footer#home {
-	width: 1000px;
-	margin: auto;
-	font-size: 15px;
-	margin-bottom: 30px;
-	color: #777;
-	background-color: transparent;
-	border-top: none;
-	/*padding: 0;*/
+    width: 1000px;
+    margin: auto;
+    font-size: 15px;
+    margin-bottom: 30px;
+    color: #777;
+    background-color: transparent;
+    border-top: none;
+    /*padding: 0;*/
 }
+
 footer p {
-	margin: 0;
-	padding: 0;
-	float: left;
+    margin: 0;
+    padding: 0;
+    float: left;
 }
+
 footer ul {
-	float: right;
-	margin: 0;
-	padding: 0;
+    float: right;
+    margin: 0;
+    padding: 0;
 }
+
 footer ul li {
-	float: left;
-	margin-right: 15px;
-	list-style: none;
+    float: left;
+    margin-right: 15px;
+    list-style: none;
 }
+
 footer ul li:last-child {
-	margin-right: 0;
+    margin-right: 0;
 }
+
 footer ul li:after {
-	content: "|";
-	font-weight: 300;
-	position: relative;
-	left: 9px;
+    content: "|";
+    font-weight: 300;
+    position: relative;
+    left: 9px;
 }
+
 footer ul li:last-child:after {
-	content: "";
+    content: "";
 }
+
 footer ul li a {
-	color: #777;
+    color: #777;
 }
