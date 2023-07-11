@@ -1,17 +1,17 @@
 /*#############################################*/
-
-
 /*################___GENERAL___################*/
-
-
 /*#############################################*/
+.body{
+    /*font-family: */
+}
 
 .container {
     background-color: var(--bg--white);
     height: 100%;
     backdrop-filter: blur(20px);
     border: var(--border);
-    border-radius: var(--br);
+    border-radius: 15px;
+    /*border-radius: var(--br);*/
     width: 70%;
     margin: 0 auto;
     box-shadow: 0 10px 20px 5px rgba(0, 0, 0, 0.5);
@@ -39,13 +39,19 @@
     border-radius: 15px;
 }
 
+#registro{
+    color: white;
+}
+#logoForm{
+    height:120px;
+    padding: 10px;
+}
+#logoFormulario{
+    padding-top: 100px;
+}
 
 /*#############################################*/
-
-
 /*################___SPINNER___################*/
-
-
 /*#############################################*/
 
 .spinner-border {
@@ -54,11 +60,7 @@
 
 
 /*#############################################*/
-
-
 /*###############___FORMULARIO___##############*/
-
-
 /*#############################################*/
 
 .form-container {
@@ -67,7 +69,7 @@
 }
 
 .card {
-    border-radius: var(--br);
+    /*border-radius: var(--br);*/
     box-sizing: border-box;
     width: 100%;
     margin: 10px 0 20px 0;
@@ -117,7 +119,8 @@
     font-weight: bolder;
     color: #fff;
     padding: 15px 30px;
-    border-radius: var(--br);
+    /*border-radius: var(--br);*/
+    border-radius: 15px !important;
     text-decoration: none;
     transition: background 0.5s ease;
     -moz-transition: background 0.5s ease;
@@ -411,7 +414,7 @@ footer ul {
 
 footer ul li {
     float: left;
-    margin-right: 15px;
+    margin-right: 25px;
     list-style: none;
 }
 
@@ -420,7 +423,7 @@ footer ul li:last-child {
 }
 
 footer ul li:after {
-    content: "|";
+    /*content: "|";*/
     font-weight: 300;
     position: relative;
     left: 9px;

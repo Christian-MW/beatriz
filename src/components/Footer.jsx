@@ -4,6 +4,11 @@ import '../../node_modules/bootstrap/dist/js/bootstrap.min.js';
 import '../styles/main.css';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFacebook } from "@fortawesome/free-brands-svg-icons"
+import { faYoutube } from "@fortawesome/free-brands-svg-icons"
+import { faTwitter } from "@fortawesome/free-brands-svg-icons"
 
 
 
@@ -78,48 +83,48 @@ const Footer = () => {
                     ningún tercero, excepto que tenga autorización del Usuario, a pesar de su política de no divulgar los datos
                     personales,  podrá divulgar dicha información:<br></br><br></br>
                     <ol>
-                        <li>Cuando considere dicha información necesaria para identificar, comunicarse con, o emprender una acción 
+                        <li>Cuando considere dicha información necesaria para identificar, comunicarse con, o emprender una acción
                             legal en contra de alguien que pudiera estar perjudicando u obstaculizando los derechos o la propiedad del sitio web.</li>
                         <li>Según sea necesario para hacer respetar y cumplir los <b>“Términos y condiciones de uso del sitio de Internet”</b>.</li>
                         <li>Según lo requiera la legislación o alguna Autoridad que en el ámbito de su competencia lo solicite.</li>
                     </ol>
-                    De acuerdo a lo explicado anteriormente, el Usuario entiende y concuerda en que esta política de privacidad no 
-                    aplica a la información que el Usuario proporcione voluntariamente al comunicarse con otras personas mediante 
-                    correspondencia electrónica, en chats, otras actividades similares. Es responsabilidad del Usuario ser prudente 
-                    en el tipo de información que entrega al participar en estas actividades públicas. El sitio web no se 
-                    responsabiliza por la privacidad o políticas de recolección de datos de terceros proveedores de servicios y 
-                    productos o de cómo esos terceros proveedores de servicios o productos usen la información que el Usuario 
+                    De acuerdo a lo explicado anteriormente, el Usuario entiende y concuerda en que esta política de privacidad no
+                    aplica a la información que el Usuario proporcione voluntariamente al comunicarse con otras personas mediante
+                    correspondencia electrónica, en chats, otras actividades similares. Es responsabilidad del Usuario ser prudente
+                    en el tipo de información que entrega al participar en estas actividades públicas. El sitio web no se
+                    responsabiliza por la privacidad o políticas de recolección de datos de terceros proveedores de servicios y
+                    productos o de cómo esos terceros proveedores de servicios o productos usen la información que el Usuario
                     brinde.
                     <br></br><br></br><br></br>
                     <b>Modificación / actualización /eliminación de la información personal</b><br></br>
-                    Los datos personales proporcionados por el Usuario formarán parte de un archivo que contendrá su perfil. 
-                    Accediendo al mismo, el Usuario puede modificarlos / actualizarlos en cualquier momento. El sitio web 
-                    aconseja al Usuario que actualice sus datos cada vez que estos sufran alguna modificación, ya que ello 
+                    Los datos personales proporcionados por el Usuario formarán parte de un archivo que contendrá su perfil.
+                    Accediendo al mismo, el Usuario puede modificarlos / actualizarlos en cualquier momento. El sitio web
+                    aconseja al Usuario que actualice sus datos cada vez que estos sufran alguna modificación, ya que ello
                     permitirá brindarle un servicio más personalizado.<br></br>
-                    Al procesar datos personales, el sitio web se compromete a que nuestro personal y los mecanismos del sitio 
+                    Al procesar datos personales, el sitio web se compromete a que nuestro personal y los mecanismos del sitio
                     de Internet cumplan con los estándares de seguridad y confidencialidad necesarios para procurar la seguridad,
-                    integridad y privacidad de la información recopilada de los usuarios en el sitio de Internet. El sitio web 
-                    tomará medidas razonables para permitir que los usuarios actualicen los datos personales que hayan 
-                    inscrito y cuando el Usuario lo solicite procurará eliminar sistemáticamente el registro del Usuario y 
-                    sus datos personales de la base de datos; sin embargo, podría ser imposible borrar por completo los datos 
+                    integridad y privacidad de la información recopilada de los usuarios en el sitio de Internet. El sitio web
+                    tomará medidas razonables para permitir que los usuarios actualicen los datos personales que hayan
+                    inscrito y cuando el Usuario lo solicite procurará eliminar sistemáticamente el registro del Usuario y
+                    sus datos personales de la base de datos; sin embargo, podría ser imposible borrar por completo los datos
                     del Usuario debido a las copias de seguridad y los registros de los datos eliminados.
                     <br></br><br></br><br></br>
                     <b>Protección de la información personal</b><br></br>
-                    La información proporcionada por el usuario está protegida por diversos mecanismos de seguridad, mediante 
-                    los cuales el Usuario podrá acceder a ellos. Debido a que ninguna transmisión por Internet puede garantizar 
+                    La información proporcionada por el usuario está protegida por diversos mecanismos de seguridad, mediante
+                    los cuales el Usuario podrá acceder a ellos. Debido a que ninguna transmisión por Internet puede garantizar
                     su seguridad al 100%, el sitio web no puede garantizar que la información transmitida utilizando su servicio
                     sea completamente segura, con lo cual el Usuario corre su propio riesgo. El Usuario es el único responsable
                     de mantener en secreto su clave y la información de su cuenta, que en un momento dado El sitio web pudiera
-                    asignarle. Para disminuir los riesgos el sitio web recomienda al Usuario salir de su cuenta y cerrar la 
-                    ventana de su navegador cuando finalice su actividad, más aún si comparte su computadora con alguien o 
+                    asignarle. Para disminuir los riesgos el sitio web recomienda al Usuario salir de su cuenta y cerrar la
+                    ventana de su navegador cuando finalice su actividad, más aún si comparte su computadora con alguien o
                     utiliza una computadora en un lugar público como una biblioteca o un cibercafé.
                     <br></br><br></br><br></br>
                     <b>Aceptación de los términos</b><br></br>
-                    Esta declaración de confidencialidad / privacidad, que describe la Política de Privacidad de el sitio web, 
-                    constituye un acuerdo válido entre el Usuario y el sitio web; si el Usuario utiliza los servicios de el 
-                    sitio web significa que ha leído, entendido, aceptado y consecuentemente acordado con el sitio web los 
-                    términos antes expuestos. En caso de no estar de acuerdo con ellos, el Usuario NO deberá proporcionar 
-                    ninguna información personal, ni utilizar este servicio o cualquier información relacionada con el sitio 
+                    Esta declaración de confidencialidad / privacidad, que describe la Política de Privacidad de el sitio web,
+                    constituye un acuerdo válido entre el Usuario y el sitio web; si el Usuario utiliza los servicios de el
+                    sitio web significa que ha leído, entendido, aceptado y consecuentemente acordado con el sitio web los
+                    términos antes expuestos. En caso de no estar de acuerdo con ellos, el Usuario NO deberá proporcionar
+                    ninguna información personal, ni utilizar este servicio o cualquier información relacionada con el sitio
                     de Internet.
                 </Modal.Body>
                 <Modal.Footer>
@@ -129,7 +134,21 @@ const Footer = () => {
                 </Modal.Footer>
             </Modal>
             <ul>
-      
+                <li>
+                <Link to="https://www.youtube.com/channel/UCtj7D7DgNXQY5MFnE9bD5wA/videos" target="_blank" >
+                        <FontAwesomeIcon icon={faYoutube} size="2x" />
+                    </Link>
+                </li>
+                <li>
+                    <Link to="https://twitter.com/beatrizparedes" target="_blank" >
+                        <FontAwesomeIcon icon={faTwitter} size="2x" />
+                    </Link>
+                </li>
+                <li>
+                    <Link to="https://www.facebook.com/BeatrizParedesR" target="_blank" >
+                        <FontAwesomeIcon icon={faFacebook} size="2x" />
+                    </Link>
+                </li>
                 <li>
                     <a onClick={() => setLgShow(true)} target="_blank" className="animated_link" data-toggle="modal" data-target="#privacy-txt">Políticas de privacidad
                     </a>

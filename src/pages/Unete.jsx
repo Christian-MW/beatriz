@@ -15,6 +15,7 @@ import { ESTADOS } from '../hooks/data';
 import { MUNICIPIOS } from '../hooks/data';
 import imgPrincipal from '../images/principal.png'
 import imgLogo from '../images/logo.png'
+import LogoHeader from '../images/logo-header3.png'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook } from "@fortawesome/free-brands-svg-icons"
@@ -31,6 +32,7 @@ const Unete = () => {
     const [catalogMunicipios, setCatalogMunicipios] = useState([]);
     const [currentDate, setcurrentDate] = useState("");
     const [statusForm, setStatusForm] = useState(false);
+    const [statusVolunteer, setStatusVolunteer] = useState(false);
     const [sexoUser, setSexoUser] = useState({});
     const [postalCodeUser, setPostalCodeUser] = useState(0);
     const [stateUser, setStateUser] = useState({});
@@ -89,7 +91,9 @@ const Unete = () => {
             setStatusForm(true)
         if (!e.target.checked)
             setStatusForm(false)
-
+    }
+    function volunteerFunc(e) {
+        setStatusVolunteer(e.target.checked);
     }
 
     const sendDataUser = () => {
@@ -103,6 +107,7 @@ const Unete = () => {
         const email = document.getElementById("txtEmail").value;
         const phone = document.getElementById("txtCel").value;
         const birthday = birthdayUser;
+        const volunteer = statusVolunteer;
         if (document.getElementById("txtNombre").value != "") {
             if (document.getElementById("txtAp_pat").value != "") {
                 if (Object.keys(sexoUser).length > 0) {
@@ -126,7 +131,8 @@ const Unete = () => {
                                             municipality: mun,
                                             postalCode: document.getElementById("txtCp").value,
                                             gender: sexoUser,
-                                            birthdate: birthdayUser
+                                            birthdate: birthdayUser,
+                                            volunteer: statusVolunteer
                                         })
                                             .then(function (response) {
                                                 console.log(JSON.stringify(response));
@@ -223,24 +229,18 @@ const Unete = () => {
                             </Modal.Title>
                         </Modal.Header>
                         <Modal.Body>{txtValidation}</Modal.Body>
-                    </Modal> 
+                    </Modal>
 
 
                     <div className='row bannner'>
-                        <div className='col-md-1 '>
-                            <img id="logoFormulario" src={imgLogo} className="img-fluid" height="576px" alt=" Beatriz Paredes" />
+                        <div className='col-md-6 '>
+                            <img id="logoForm" src={LogoHeader} className="img-fluid" alt=" Beatriz Paredes" />
                         </div>
-                        <div className='col-md-8'>
-                            BEATRIZ PAREDES
-                        </div>
-                        <div className='col-md-3 text-right'>
-                            <FontAwesomeIcon icon={faFacebook} />
-                            <FontAwesomeIcon icon={faYoutube} />
-                            <FontAwesomeIcon icon={faTwitter} />
-
-                       
-                      
-                        </div>
+                        {/*<div className='col-md-8'>
+                            <p id="registro" class="text-center p-0 m-0 h2 pt-3">
+                                BEATRIZ PAREDES RANGEL
+                            </p>
+                        </div>*/}
 
                     </div>
                     <div className='row background-form-container'>
@@ -374,6 +374,32 @@ const Unete = () => {
                                         </div>
 
 
+
+
+                                        <div className='row'>
+                                            <div className='col-md-12 form-group'>
+                                                <div className="form-group d-flex">
+                                                    <div className='col-md-1'>
+                                                        <Form.Check
+                                                            className="checkData"
+                                                            onChange={(e) => volunteerFunc(e)}
+                                                            type={"checkbox"}
+                                                            id={'default-checkbox'}
+                                                            value={'yes'}
+                                                        />
+                                                    </div>
+                                                    <div className='col-md11'>
+                                                        <label onChange={(e) => volunteerFunc(e)} className="text-justify">
+                                                            ¿Quieres ser voluntario?
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br></br><br></br>
+
+
+
                                         <div className='row'>
                                             <div className='col-md-12 form-group'>
                                                 <div className="form-group d-flex">
@@ -385,11 +411,6 @@ const Unete = () => {
                                                             id={'default-checkbox'}
                                                             value={'yes'}
                                                         />
-                                                        {/*<div className="icheckbox_square-grey">
-                                                        <input name="apoyo" id="cDatos" type="checkbox" className="icheck required" value="yes" />
-                                                        <ins className="iCheck-helper" onClick={(e) => aproveData(e)}>
-                                                        </ins>
-                                                    </div>*/}
                                                     </div>
                                                     <div className='col-md11'>
                                                         <label onChange={(e) => aproveData(e)} className="text-justify">
